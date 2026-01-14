@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact XML Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact XML Parser</h1>
+            <p>Parse XML contact files using SAX parser</p>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="filepath">File Path</button>
+                <button class="tab-btn" data-tab="upload">Upload File</button>
+                <button class="tab-btn" data-tab="content">Paste XML</button>
+            </div>
+
+            <div id="filepath-tab" class="tab-content active">
+                <div class="input-section">
+                    <label for="filePath">XML File Path:</label>
+                    <input type="text" id="filePath" placeholder="Enter path to XML file (e.g., src/main/resources/test-contacts.xml)">
+                    <button id="parseBtn">Parse XML</button>
+                </div>
+            </div>
+
+            <div id="upload-tab" class="tab-content">
+                <div class="input-section">
+                    <label for="fileInput">Select XML File:</label>
+                    <input type="file" id="fileInput" accept=".xml,text/xml">
+                    <button id="uploadBtn">Upload & Parse</button>
+                </div>
+            </div>
+
+            <div id="content-tab" class="tab-content">
+                <div class="input-section">
+                    <label for="xmlContent">Paste XML Content:</label>
+                    <textarea id="xmlContent" rows="15" placeholder="Paste your XML content here..."></textarea>
+                    <button id="parseContentBtn">Parse XML</button>
+                </div>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Parsing XML...</p>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+
+            <div id="results" class="results hidden">
+                <h2>Parsed Contacts (<span id="contactCount">0</span>)</h2>
+                <div id="contactList"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

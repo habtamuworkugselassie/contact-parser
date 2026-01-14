@@ -1,0 +1,17 @@
+<contacts>
+    <contact id="1">
+        <name>David</name>
+        <lastName>FRALEY</lastName>
+        <contacts>
+            <contact id="2">
+                <name>Mary</name>
+                <lastName>JANE</lastName>
+                <contacts />
+            </contact>
+        </contacts>
+    </contact>
+    <contact id="3">
+        <name>John</name>
+        <lastName>DOE</lastName>
+    </contact>
+</contacts>
